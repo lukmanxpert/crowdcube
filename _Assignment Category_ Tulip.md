@@ -37,12 +37,12 @@
    <!-- * Home,    -->
    <!-- * All Campaign,    -->
 
-- Add New Campaign**(It will be a private/protected route)**,
+<!-- - Add New Campaign**(It will be a private/protected route)**,
 - My Campaign**(It will be a private/protected route)**,
-- My Donations**(It will be a private/protected route)**,
-- “Log in”, and “Register” **(Conditional)**
-  - The “Login” and “Register” buttons is conditional, if the user is not logged in it will show the “Login” and “Register” Button. If a user clicks on “Login” it will redirect to the login page. If a user clicks on “Register” it will redirect to the Register page.
-    - If the user is logged in here you will show the user photoURL, when you hover over the image it will show the displayName. And it will show the “Log out” button.
+- My Donations**(It will be a private/protected route)**, -->
+<!-- - “Log in”, and “Register” **(Conditional)** -->
+  <!-- - The “Login” and “Register” buttons is conditional, if the user is not logged in it will show the “Login” and “Register” Button. If a user clicks on “Login” it will redirect to the login page. If a user clicks on “Register” it will redirect to the Register page. -->
+    <!-- - If the user is logged in here you will show the user photoURL, when you hover over the image it will show the displayName. And it will show the “Log out” button. -->
 
 <!-- 2. **Main Section:** Main Section will show different pages based on routes. -->
 <!-- 3. **Footer:** A Footer with all relevant information and eye-catching design. -->

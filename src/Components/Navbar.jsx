@@ -17,9 +17,13 @@ const Navbar = () => {
     const links = <>
         <NavLink to='/home'><a>Home</a></NavLink>
         <NavLink to='/all-campaign'><a>All Campaign</a></NavLink>
-        <NavLink to='/add-campaign'><a>Add New Campaign</a></NavLink>
-        <NavLink to='/my-campaign'><a>My Campaign</a></NavLink>
-        <NavLink to='/my-donation'><a>My Donations</a></NavLink>
+        {
+            user && <div className='flex flex-col md:flex-row md:gap-4'>
+                <NavLink to='/add-campaign'><a>Add New Campaign</a></NavLink>
+                <NavLink to='/my-campaign'><a>My Campaign</a></NavLink>
+                <NavLink to='/my-donation'><a>My Donations</a></NavLink>
+            </div>
+        }
     </>
     return (
         <div className="navbar bg-base-100">
