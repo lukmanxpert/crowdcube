@@ -47,16 +47,16 @@
 <!-- 2. **Main Section:** Main Section will show different pages based on routes. -->
 <!-- 3. **Footer:** A Footer with all relevant information and eye-catching design. -->
 
-- ##### **Home Page:**
+<!-- - ##### **Home Page:**
 
 4. **Home Page:** Besides the navbar and footer the **Home Page** will contain a banner/Slider, a Running Campaign Section, 2 Extra Sections,  
-   🎯 **Make sure to keep the navbar and footer on all the pages except the 404 page.**  
+   🎯 **Make sure to keep the navbar and footer on all the pages except the 404 page.**   -->
 
-5. **Banner:** Add a slider (you can use any type of slider/carousel) with a minimum of 3 slides and meaningful information  
-
-6. **Running Campaign Section:** You need to show at least 6 cards of Running Campaign. Running campaigns are the ones where the deadline has **not passed** yet. These campaigns are still active, and people can contribute to them. Here you will show the data from the database. Which data you want to show on the card is up to you. Each card will contain a “See More” button.
-   **update: By Clicking on the “See More” button it will redirect you to the details page.**
-   **For showing 6 data you can use the [limit operator](https://www.mongodb.com/docs/manual/reference/method/cursor.limit/) of MongoDB**
+<!-- 5. **Banner:** Add a slider (you can use any type of slider/carousel) with a minimum of 3 slides and meaningful information   -->
+<!-- 
+6. **Running Campaign Section:** You need to show at least 6 cards of Running Campaign. Running campaigns are the ones where the deadline has **not passed** yet. These campaigns are still active, and people can contribute to them. Here you will show the data from the database. Which data you want to show on the card is up to you. Each card will contain a “See More” button. -->
+   <!-- **update: By Clicking on the “See More” button it will redirect you to the details page.**
+   **For showing 6 data you can use the [limit operator](https://www.mongodb.com/docs/manual/reference/method/cursor.limit/) of MongoDB** -->
 7. **Extra Section:** Add 2 relevant and meaningful extra sections that are mentioned above on the Home page.
 
 ##### **Authentication**
