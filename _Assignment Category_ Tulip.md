@@ -137,7 +137,7 @@
 
 ##### **17\. Other Requirements**
 
-- **404 page:** Add a 404 page/Not Found Page
+<!-- - **404 page:** Add a 404 page/Not Found Page -->
 - **Loading Spinner:** Show a loading spinner when the data is in a loading state.
 
 ### **Challenges**
