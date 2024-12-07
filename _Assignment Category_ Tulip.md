@@ -7,17 +7,17 @@
 <!-- ## **Crowdcube: A Crowd Funding Application** -->
 
 <!-- ##### **Project Theme** -->
+<!-- 
+## A crowdfunding website is a platform where people can raise money for different projects, ideas, or causes by inviting others to contribute financially. These projects can include personal needs (like medical expenses), creative ideas (like making a film or app), and startups (like launching a new product).    -->
 
-## <!-- A crowdfunding website is a platform where people can raise money for different projects, ideas, or causes by inviting others to contribute financially. These projects can include personal needs (like medical expenses), creative ideas (like making a film or app), and startups (like launching a new product).    -->
+<!-- ##### **Key Rules:**
 
-##### **Key Rules:**
-
-- **GitHub Commits:**
-  - Include a minimum of 15 notable GitHub commits on the client side.
-  - Include a minimum of 8 notable GitHub commits on the server side
+- **GitHub Commits:** -->
+  <!-- - Include a minimum of 15 notable GitHub commits on the client side. -->
+  <!-- - Include a minimum of 8 notable GitHub commits on the server side -->
 - **Readme.md:** Add a meaningful readme.md file with the name of your website and a live site URL. Include a minimum of five bullet points to feature your website.
-- **Responsiveness:** Make it responsive for all devices, including mobile, tablet, and desktop views.
-- **Environment Variables:** The Environment variable hides the Firebase config keys and Mongodb credentials.
+<!-- - **Responsiveness:** Make it responsive for all devices, including mobile, tablet, and desktop views. -->
+<!-- - **Environment Variables:** The Environment variable hides the Firebase config keys and Mongodb credentials. -->
   <!-- * **Lorem Text:** Don’t use any Lorem ipsum text; you can not use the default alert to show any error or success message.    -->
   <!-- * **Unique Design:** Create a unique Design but remember, your website idea shouldn't be similar to any projects you've done before or to any examples in our modules or conceptual sessions.
 - You can also look for free resources on [blogs](https://bootcamp.uxdesign.cc/free-images-and-resources-collection-for-website-c77f2fc46ce5) to help with your website. -->
@@ -27,12 +27,12 @@
   - Logged in User must not redirect to Login on reloading any private route
 
 ---
-
+<!-- 
 **Main Requirements:**
 
-- **Layout Structure**
+- **Layout Structure** -->
 
-1. **Navbar:** The navbar will contain the
+<!-- 1. **Navbar:** The navbar will contain the -->
    <!-- * Website name/logo,    -->
    <!-- * Home,    -->
    <!-- * All Campaign,    -->
@@ -151,8 +151,8 @@
 - At the top of the **All Campaign** page, there will be a button where you will implement [sort](https://www.mongodb.com/docs/manual/reference/method/cursor.sort/) functionality based on “Minimum donation amount”. You can sort by ascending or descending or, it’s up to you.
 - In the Details page if the deadline is over you can’t add the campaign to the donated collection rather you will show a message/toast/modal.
 
-**What to submit:**
+<!-- **What to submit:**
 
 - Your client-side code GitHub repository
 - Your server-side code GitHub repository
-- Your live website link
+- Your live website link -->
