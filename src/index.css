@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    overflow-y: scroll;
+body {
+  overflow-y: scroll;
+}
+.slide-content {
+  position: relative;
+}
+.slide-content > img {
+  filter: brightness(0.7);
+}
+.slide-content .slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
 }

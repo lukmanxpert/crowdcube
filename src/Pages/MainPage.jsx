@@ -6,10 +6,10 @@ import Footer from '../Components/Footer';
 const MainPage = () => {
     return (
         <div>
-            <section>
+            <section className='sticky top-0 z-50'>
                 <Navbar></Navbar>
             </section>
-            <section>
+            <section className='min-h-96'>
                 <Outlet></Outlet>
             </section>
             <section>
