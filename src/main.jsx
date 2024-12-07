@@ -14,6 +14,8 @@ import MainPage from './Pages/MainPage';
 import Home from './Pages/Home';
 import ErrorPage from './Pages/ErrorPage';
 import AuthProvider from './providers/AuthProvider';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: '/home',
         element: <Home></Home>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       }
     ]
   },
