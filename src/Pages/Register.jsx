@@ -7,6 +7,7 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         const form = e.target;
+        const name = form.name.value;
         const email = form.email.value;
         const photo = form.photo.value;
         const password = form.password.value;
@@ -22,6 +23,12 @@ const Register = () => {
     return (
         <div className="card mx-auto mt-10 bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form onSubmit={handleSubmit} className="card-body">
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Name</span>
+                    </label>
+                    <input type="text" name='name' placeholder="name" className="input input-bordered" required />
+                </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>

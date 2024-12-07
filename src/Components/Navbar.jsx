@@ -1,13 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProvider';
+import { FaUserCircle } from 'react-icons/fa';
 
 const Navbar = () => {
+    const { user, setUser, signOutUser } = useContext(AuthContext)
+    const handleLogOut = () => {
+        signOutUser()
+            .then(() => {
+                setUser(null)
+            })
+            .catch(err => {
+                console.log("ERROR", err);
+            })
+    }
     const links = <>
-        <Link><a>Home</a></Link>
-        <Link><a>All Campaign</a></Link>
-        <Link><a>Add New Campaign</a></Link>
-        <Link><a>My Campaign</a></Link>
-        <Link><a>My Donations</a></Link>
+        <NavLink to='/home'><a>Home</a></NavLink>
+        <NavLink to='/all-campaign'><a>All Campaign</a></NavLink>
+        <NavLink to='/add-campaign'><a>Add New Campaign</a></NavLink>
+        <NavLink to='/my-campaign'><a>My Campaign</a></NavLink>
+        <NavLink to='/my-donation'><a>My Donations</a></NavLink>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -33,7 +45,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Crowdcube</a>
+                <Link to='/home' className="btn btn-ghost text-xl">Crowdcube</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu gap-4 menu-horizontal px-1">
@@ -41,7 +53,30 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login' className="btn">Login</Link>
+                {
+                    user ?
+                        <div className="relative inline-block group">
+                            {
+                                user.photoURL ? <img
+                                    src={user.photoURL}
+                                    alt={user.displayName}
+                                    className="w-10 h-10 rounded-full cursor-pointer"
+                                /> : <FaUserCircle className='h-8 w-8' />
+                            }
+                            <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 hidden group-hover:block bg-gray-800 text-white text-sm py-1 px-3 rounded shadow-lg whitespace-nowrap z-10">
+                                {user.displayName}
+                            </div>
+                            <button
+                                className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-red-500 text-white text-sm px-4 py-1 rounded shadow-lg z-10"
+                                style={{ top: "20px", left: "" }}
+                                onClick={handleLogOut}
+                            >
+                                Log out
+                            </button>
+                        </div>
+                        : <Link to='/login' className="btn">Login</Link>
+                }
+
             </div>
         </div>
     );

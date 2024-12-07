@@ -16,6 +16,10 @@ import ErrorPage from './Pages/ErrorPage';
 import AuthProvider from './providers/AuthProvider';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import AllCampaign from './Pages/AllCampaign';
+import AddCampaign from './Pages/AddCampaign';
+import MyCampaign from './Pages/MyCampaign';
+import MyDonation from './Pages/MyDonation';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +42,22 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/all-campaign',
+        element: <AllCampaign></AllCampaign>
+      },
+      {
+        path: '/add-campaign',
+        element: <AddCampaign></AddCampaign>
+      },
+      {
+        path: '/my-campaign',
+        element: <MyCampaign></MyCampaign>
+      },
+      {
+        path: '/my-donation',
+        element: <MyDonation></MyDonation>
       }
     ]
   },

@@ -57,24 +57,24 @@
 6. **Running Campaign Section:** You need to show at least 6 cards of Running Campaign. Running campaigns are the ones where the deadline has **not passed** yet. These campaigns are still active, and people can contribute to them. Here you will show the data from the database. Which data you want to show on the card is up to you. Each card will contain a “See More” button. -->
    <!-- **update: By Clicking on the “See More” button it will redirect you to the details page.**
    **For showing 6 data you can use the [limit operator](https://www.mongodb.com/docs/manual/reference/method/cursor.limit/) of MongoDB** -->
-7. **Extra Section:** Add 2 relevant and meaningful extra sections that are mentioned above on the Home page.
+<!-- 7. **Extra Section:** Add 2 relevant and meaningful extra sections that are mentioned above on the Home page. -->
 
-##### **Authentication**
+<!-- ##### **Authentication**
 
 8.  **Login Page:** When you click the login button on the navbar it redirects to the login page. You have to use a password and email-based authentication to log in. The login page will have-
 1.  Email
 1.  Password
 1.  Google login, GitHub \- implement any of one
-1.  A link that will redirect to the Register page
+1.  A link that will redirect to the Register page -->
 
 **🎯Here the email and password should match with the registered email and password. If it doesn’t match, show an error. You can show an error by using toast/sweet alert if you want.**
 
-9. **Register Page:** You have to use a password and email-based authentication to register. The Register page will have the following \-
+<!-- 9. **Register Page:** You have to use a password and email-based authentication to register. The Register page will have the following \-
    - Name
    - Email
    - photoURL
    - password
-   - A Link that will redirect to the login page
+   - A Link that will redirect to the login page -->
 
 - For password verification you need to follow this \-
 - Must have an Uppercase letter in the password
