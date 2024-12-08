@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const MyCampaign = () => {
     const { user } = useContext(AuthContext)
@@ -14,14 +15,31 @@ const MyCampaign = () => {
             .then(err => console.log("ERROR", err))
     }, [])
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
-            method: "DELETE"
-        })
-            .then(res => {
-                const newMyCampaign = myCampaigns.filter(cam => cam._id !== id)
-                setMyCampaigns(newMyCampaign);
-            })
-            .catch(err => console.log("ERROR", err))
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/delete/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => {
+                        const newMyCampaign = myCampaigns.filter(cam => cam._id !== id)
+                        setMyCampaigns(newMyCampaign);
+                    })
+                    .catch(err => console.log("ERROR", err))
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+            }
+        });
     }
     if (!myCampaigns) {
         return <div className='h-60 flex justify-center items-center'>

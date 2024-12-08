@@ -118,7 +118,7 @@
     **It will be a private/protected route.** On this page, a user can see all the Campaigns he/she has added to the database. here a user can only see his/her added data, but he/she can not access other's data. Here you need to show the data in table Format. Each row of the table will contain these information-
     - 3-4 information about the campaign -->
     - “Update” Button
-    - “Delete” Button
+    <!-- - “Delete” Button -->
 14. **Update Campaign Page (/updateCampaign/:id)**  
     **It will be a private/protected route.** When a user clicks on the “Update Button” it will take the user to the Update page, where there will be a form for the user to update a Campaign. The form will have the following:
 
@@ -127,10 +127,10 @@
 
     **This will be a private/protected route.** When you fill in the data and submit the “Update” button, these data will be updated to the previous data in your database and you will show a success message through toast/sweet alert.
 
-🎯🎯**(Optional):** If you don’t want to create an Update page, you can also use a **modal** to update your data. For this when you click on the “Update” button it will open a modal but make sure you are logged in before updating the data.
+<!-- 🎯🎯**(Optional):** If you don’t want to create an Update page, you can also use a **modal** to update your data. For this when you click on the “Update” button it will open a modal but make sure you are logged in before updating the data. -->
 
-15. **Delete:**  
-     If the user clicks the delete button, the Campaigns will be removed from the data. Before the delete, ask for a delete confirmation.  
+<!-- 15. **Delete:**  
+     If the user clicks the delete button, the Campaigns will be removed from the data. Before the delete, ask for a delete confirmation.   -->
 
 16. **My Donations (/myDonations)**  
     **It will be a private/protected route.** On this page, a user can see all the Donated Campaigns he/she has added to the database. You need to show all the data in Card format. here a user can only see his/her added data, but he/she can not access other's data. Which data you want to show is your choice.
