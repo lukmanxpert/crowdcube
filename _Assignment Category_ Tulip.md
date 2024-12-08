@@ -114,9 +114,9 @@
 
     **Update: Clicking the See More button will redirect you to the Details Page.**
 
-13. **My Campaign (/myCampaign)**  
+<!-- 13. **My Campaign (/myCampaign)**  
     **It will be a private/protected route.** On this page, a user can see all the Campaigns he/she has added to the database. here a user can only see his/her added data, but he/she can not access other's data. Here you need to show the data in table Format. Each row of the table will contain these information-
-    - 3-4 information about the campaign
+    - 3-4 information about the campaign -->
     - “Update” Button
     - “Delete” Button
 14. **Update Campaign Page (/updateCampaign/:id)**  
