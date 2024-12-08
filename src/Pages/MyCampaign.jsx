@@ -4,7 +4,7 @@ import { AuthContext } from '../providers/AuthProvider';
 const MyCampaign = () => {
     const { user } = useContext(AuthContext)
     const { email } = user
-    const [myCampaigns, setMyCampaigns] = useState(null);
+    const [myCampaigns, setMyCampaigns] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/myCampaigns/${email}`, {
             method: "GET"
@@ -17,8 +17,11 @@ const MyCampaign = () => {
         fetch(`http://localhost:5000/delete/${id}`, {
             method: "DELETE"
         })
-        .then(res=>console.log(res))
-        .catch(err=>console.log("ERROR", err))
+            .then(res => {
+                const newMyCampaign = myCampaigns.filter(cam => cam._id !== id)
+                setMyCampaigns(newMyCampaign);
+            })
+            .catch(err => console.log("ERROR", err))
     }
     if (!myCampaigns) {
         return <div className='h-60 flex justify-center items-center'>
