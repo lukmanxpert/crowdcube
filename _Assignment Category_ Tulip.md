@@ -142,7 +142,7 @@
 
 ### **Challenges**
 
-- Implement a dark/light theme toggle for the home page.
+<!-- - Implement a dark/light theme toggle for the home page. -->
 - Explore this package and implement at least 2-
   - [Lottie React](https://www.npmjs.com/package/lottie-react)
   - [React-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)

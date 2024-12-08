@@ -9,7 +9,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const Banner = () => {
     return (
-        <div className="banner-slider">
+        <div className="banner-slider bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg shadow-lg">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 navigation

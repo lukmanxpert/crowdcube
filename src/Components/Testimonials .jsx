@@ -34,9 +34,9 @@ const Testimonials = () => {
     ];
 
     return (
-        <section className="advanced-testimonials py-10 bg-gray-100">
+        <section className="advanced-testimonials py-10 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg shadow-lg">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+                <h2 className="text-3xl font-bold text-center text-gray-800 mb-8 dark:text-gray-100">
                     What People Say
                 </h2>
                 <Swiper
@@ -53,17 +53,17 @@ const Testimonials = () => {
                 >
                     {testimonials.map((testimonial) => (
                         <SwiperSlide key={testimonial.id}>
-                            <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+                            <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
                                 <img
                                     src={testimonial.image}
                                     alt={testimonial.name}
                                     className="w-20 h-20 rounded-full mb-4"
                                 />
-                                <h3 className="text-xl font-semibold text-gray-800">
+                                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
                                     {testimonial.name}
                                 </h3>
-                                <p className="text-sm text-gray-500 italic">{testimonial.role}</p>
-                                <p className="text-gray-600 text-center mt-4">
+                                <p className="text-sm text-gray-500 italic dark:text-gray-300">{testimonial.role}</p>
+                                <p className="text-gray-600 text-center mt-4 dark:text-gray-300">
                                     "{testimonial.feedback}"
                                 </p>
                             </div>

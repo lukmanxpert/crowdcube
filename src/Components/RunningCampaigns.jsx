@@ -12,9 +12,9 @@ const RunningCampaigns = () => {
             })
     }, [])
     return (
-        <section className="running-campaigns py-10 bg-gray-100">
+        <section className="running-campaigns py-10 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg shadow-lg">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+                <h2 className="text-3xl font-bold text-center text-gray-800 mb-8 dark:text-gray-100">
                     Running Campaigns
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -24,7 +24,7 @@ const RunningCampaigns = () => {
                     {campaigns?.map((campaign) => (
                         <div
                             key={campaign._id}
-                            className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                            className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
                         >
                             {/* Image */}
                             <img
@@ -34,16 +34,16 @@ const RunningCampaigns = () => {
                             />
                             {/* Content */}
                             <div className="p-4">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                                <h3 className="text-xl font-semibold text-gray-800 mb-2 dark:text-gray-100">
                                     {campaign.title}
                                 </h3>
-                                <p className="text-gray-600 text-sm mb-4">
+                                <p className="text-gray-600 text-sm mb-4 dark:text-gray-300">
                                     {campaign.description.slice(0, 100)}...
                                 </p>
-                                <p className="text-sm text-gray-500 mb-2">
+                                <p className="text-sm text-gray-500 mb-2 dark:text-gray-300">
                                     Minimum Donation: <span className="font-semibold">${campaign.minimumDonation}</span>
                                 </p>
-                                <p className="text-sm text-gray-500 mb-4">
+                                <p className="text-sm text-gray-500 mb-4 dark:text-gray-300">
                                     Deadline: <span className="font-semibold">{campaign.deadline}</span>
                                 </p>
                                 {/* See More Button */}
