@@ -112,13 +112,13 @@
 <!-- 12. **All Campaign (/campaigns)**  
     Create an All Campaign page where you will see the campaigns all the users have added to the database. You will get the data from the database and show it here in the table. Which property you want to show for each campaign is up to you. There will be a See More button on each table row. -->
 
-    **Update: Clicking the See More button will redirect you to the Details Page.**
+    <!-- **Update: Clicking the See More button will redirect you to the Details Page.** -->
 
 <!-- 13. **My Campaign (/myCampaign)**  
     **It will be a private/protected route.** On this page, a user can see all the Campaigns he/she has added to the database. here a user can only see his/her added data, but he/she can not access other's data. Here you need to show the data in table Format. Each row of the table will contain these information-
     - 3-4 information about the campaign -->
     - “Update” Button
-    <!-- - “Delete” Button -->
+    - “Delete” Button -->
 14. **Update Campaign Page (/updateCampaign/:id)**  
     **It will be a private/protected route.** When a user clicks on the “Update Button” it will take the user to the Update page, where there will be a form for the user to update a Campaign. The form will have the following:
 
@@ -132,10 +132,10 @@
 <!-- 15. **Delete:**  
      If the user clicks the delete button, the Campaigns will be removed from the data. Before the delete, ask for a delete confirmation.   -->
 
-16. **My Donations (/myDonations)**  
-    **It will be a private/protected route.** On this page, a user can see all the Donated Campaigns he/she has added to the database. You need to show all the data in Card format. here a user can only see his/her added data, but he/she can not access other's data. Which data you want to show is your choice.
+<!-- 16. **My Donations (/myDonations)**  
+    **It will be a private/protected route.** On this page, a user can see all the Donated Campaigns he/she has added to the database. You need to show all the data in Card format. here a user can only see his/her added data, but he/she can not access other's data. Which data you want to show is your choice. -->
 
-##### **17\. Other Requirements**
+<!-- ##### **17\. Other Requirements** -->
 
 <!-- - **404 page:** Add a 404 page/Not Found Page -->
 <!-- - **Loading Spinner:** Show a loading spinner when the data is in a loading state. -->
