@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Register = () => {
-    const { user, setUser, signUpNewUser } = useContext(AuthContext);
+    const { setUser, signUpNewUser } = useContext(AuthContext);
+    const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -11,13 +13,20 @@ const Register = () => {
         const email = form.email.value;
         const photo = form.photo.value;
         const password = form.password.value;
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+        if (password.length < 6) {
+            return toast.error("Password must have at least 6 characters");
+        } else if (!passwordRegex.test(password)) { // Use "!" to check if the regex fails
+            return toast.error("Password must have at least one uppercase and one lowercase character");
+        }
         signUpNewUser(email, password)
             .then(res => {
                 setUser(res.user);
                 form.reset();
+                navigate('/home')
             })
             .catch(err => {
-                console.log("ERROR", err);
+                toast.error(err.message)
             })
     }
     return (
@@ -54,6 +63,7 @@ const Register = () => {
                     <button className="btn btn-primary">Register</button>
                 </div>
             </form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

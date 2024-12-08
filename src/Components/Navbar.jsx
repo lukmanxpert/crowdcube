@@ -72,7 +72,7 @@ const Navbar = () => {
                             </div>
                             <button
                                 className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-red-500 text-white text-sm px-4 py-1 rounded shadow-lg z-10"
-                                style={{ top: "20px", left: "" }}
+                                style={{ top: "20px" }}
                                 onClick={handleLogOut}
                             >
                                 Log out

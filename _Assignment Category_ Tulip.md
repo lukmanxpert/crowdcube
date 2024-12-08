@@ -67,7 +67,7 @@
 1.  Google login, GitHub \- implement any of one
 1.  A link that will redirect to the Register page -->
 
-**🎯Here the email and password should match with the registered email and password. If it doesn’t match, show an error. You can show an error by using toast/sweet alert if you want.**
+<!-- **🎯Here the email and password should match with the registered email and password. If it doesn’t match, show an error. You can show an error by using toast/sweet alert if you want.** -->
 
 <!-- 9. **Register Page:** You have to use a password and email-based authentication to register. The Register page will have the following \-
    - Name
@@ -76,16 +76,16 @@
    - password
    - A Link that will redirect to the login page -->
 
-- For password verification you need to follow this \-
-- Must have an Uppercase letter in the password
+<!-- - For password verification you need to follow this \- -->
+<!-- - Must have an Uppercase letter in the password
 - Must have a Lowercase letter in the password
-- Length must be at least 6 character
-- If any of this isn’t fulfilled it will show an error/toast
-- After successful login or Register you need to show toast/sweet alert
+- Length must be at least 6 character -->
+<!-- - If any of this isn’t fulfilled it will show an error/toast -->
+<!-- - After successful login or Register you need to show toast/sweet alert -->
 
-  **🎯Don’t implement email verification or forget password method as it will inconvenience the examiner. If you want, you can add these after receiving the assignment result.**
+  <!-- **🎯Don’t implement email verification or forget password method as it will inconvenience the examiner. If you want, you can add these after receiving the assignment result.**
 
----
+--- -->
 
 10. **Add New Campaign Page ( /addCampaign )**  
     Create an Add New Campaign page where there will be a form for the user to add a Campaign. The form will have:

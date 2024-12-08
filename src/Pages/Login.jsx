@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 
 const Login = () => {
     const { setUser, signInUser } = useContext(AuthContext)
@@ -10,14 +11,28 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
+        if (password.length < 6) {
+            return toast.error("Password must have at least 6 character")
+        }
         signInUser(email, password)
             .then(res => {
                 setUser(res.user);
+                toast.success("Successfully Logged In")
                 form.reset();
                 navigate('/')
             })
             .catch(err => {
-                console.log("ERROR", err);
+                toast.error('Wrong email or password', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
             })
     }
     return (
@@ -43,6 +58,21 @@ const Login = () => {
                     <button className="btn btn-primary">Login</button>
                 </div>
             </form>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+                transition:Bounce
+            />
+            {/* Same as */}
+            <ToastContainer />
         </div>
     );
 };
