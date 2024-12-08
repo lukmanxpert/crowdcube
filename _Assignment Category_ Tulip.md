@@ -15,7 +15,7 @@
 - **GitHub Commits:** -->
   <!-- - Include a minimum of 15 notable GitHub commits on the client side. -->
   <!-- - Include a minimum of 8 notable GitHub commits on the server side -->
-- **Readme.md:** Add a meaningful readme.md file with the name of your website and a live site URL. Include a minimum of five bullet points to feature your website.
+<!-- - **Readme.md:** Add a meaningful readme.md file with the name of your website and a live site URL. Include a minimum of five bullet points to feature your website. -->
 <!-- - **Responsiveness:** Make it responsive for all devices, including mobile, tablet, and desktop views. -->
 <!-- - **Environment Variables:** The Environment variable hides the Firebase config keys and Mongodb credentials. -->
   <!-- * **Lorem Text:** Don’t use any Lorem ipsum text; you can not use the default alert to show any error or success message.    -->
@@ -87,19 +87,19 @@
 
 --- -->
 
-10. **Add New Campaign Page ( /addCampaign )**  
-    Create an Add New Campaign page where there will be a form for the user to add a Campaign. The form will have:
+<!-- 10. **Add New Campaign Page ( /addCampaign )**  
+    Create an Add New Campaign page where there will be a form for the user to add a Campaign. The form will have: -->
 
 
-    * image/thumbnail ( use image URL)
-    * Campaign title(string)
-    * Campaign type ( personal issue, startup, business, creative ideas) you can take it as a dropdown list.
-    * description
-    * Minimum donation amount (number)
-    * Deadline (Date)
-    * User Email  (Read Only/ you can not edit this field)
+    <!-- * image/thumbnail ( use image URL) -->
+    <!-- * Campaign title(string) -->
+    <!-- * Campaign type ( personal issue, startup, business, creative ideas) you can take it as a dropdown list. -->
+    <!-- * description -->
+    <!-- * Minimum donation amount (number) -->
+    <!-- * Deadline (Date) -->
+    <!-- * User Email  (Read Only/ you can not edit this field)
     * User Name  (Read Only/ you can not edit this field)
-    * “Add” button
+    * “Add” button -->
 
 
     **This will be a private/protected route.**

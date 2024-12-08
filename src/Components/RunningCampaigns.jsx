@@ -7,7 +7,7 @@ const RunningCampaigns = () => {
         fetch('http://localhost:5000/campaigns')
             .then(res => res.json())
             .then(data => {
-                setCampaigns(data)
+                setCampaigns(data.slice(0, 6))
                 setLoading(false)
             })
     }, [])
