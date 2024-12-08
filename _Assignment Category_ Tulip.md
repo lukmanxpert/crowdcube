@@ -106,11 +106,11 @@
     When you fill in the data and submit the “Add” button, these data will be stored in your database and you will show a success message through toast/sweet alert.
 
 
-11. **Details page (/campaign/:id)**  
-    **Details route will be a private/protected route.** Please make sure that if the user is not logged in, the private route redirects to the login page. On this page, you will show all the information you have stored in the database. There will be a “Donate” button on this page, after clicking on the “Donate” Button the campaign data (with logged-in email and username) will be stored on the database in the **donated collection** with the user email and username.  
+<!-- 11. **Details page (/campaign/:id)**  
+    **Details route will be a private/protected route.** Please make sure that if the user is not logged in, the private route redirects to the login page. On this page, you will show all the information you have stored in the database. There will be a “Donate” button on this page, after clicking on the “Donate” Button the campaign data (with logged-in email and username) will be stored on the database in the **donated collection** with the user email and username.   -->
 
-12. **All Campaign (/campaigns)**  
-    Create an All Campaign page where you will see the campaigns all the users have added to the database. You will get the data from the database and show it here in the table. Which property you want to show for each campaign is up to you. There will be a See More button on each table row.
+<!-- 12. **All Campaign (/campaigns)**  
+    Create an All Campaign page where you will see the campaigns all the users have added to the database. You will get the data from the database and show it here in the table. Which property you want to show for each campaign is up to you. There will be a See More button on each table row. -->
 
     **Update: Clicking the See More button will redirect you to the Details Page.**
 
@@ -138,7 +138,7 @@
 ##### **17\. Other Requirements**
 
 <!-- - **404 page:** Add a 404 page/Not Found Page -->
-- **Loading Spinner:** Show a loading spinner when the data is in a loading state.
+<!-- - **Loading Spinner:** Show a loading spinner when the data is in a loading state. -->
 
 ### **Challenges**
 

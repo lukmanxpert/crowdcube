@@ -22,6 +22,7 @@ import AddCampaign from './Pages/AddCampaign';
 import MyCampaign from './Pages/MyCampaign';
 import MyDonation from './Pages/MyDonation';
 import PrivateRoute from './providers/PrivateRoute';
+import DetailsPage from './Pages/DetailsPage';
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/all-campaign',
-        loader: ()=>fetch('http://localhost:5000/campaigns'),
+        loader: () => fetch('http://localhost:5000/campaigns'),
         element: <AllCampaign></AllCampaign>
       },
       {
@@ -66,6 +67,12 @@ const router = createBrowserRouter([
         path: '/my-donation',
         element: <PrivateRoute>
           <MyDonation></MyDonation>
+        </PrivateRoute>
+      },
+      {
+        path: '/campaigns/:id',
+        element: <PrivateRoute>
+          <DetailsPage></DetailsPage>
         </PrivateRoute>
       }
     ]

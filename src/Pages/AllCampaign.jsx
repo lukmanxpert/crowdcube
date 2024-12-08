@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
 const AllCampaign = () => {
@@ -38,12 +38,12 @@ const AllCampaign = () => {
                             Deadline: <span className="font-semibold">{campaign.deadline}</span>
                         </p>
                         {/* See More Button */}
-                        <button
-                            onClick={() => window.location.href = `/campaign/${campaign.id}`}
+                        <Link
+                            to={`/campaigns/${campaign._id}`}
                             className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
                         >
                             See More
-                        </button>
+                        </Link>
                     </div>
                 </div>)
             }
