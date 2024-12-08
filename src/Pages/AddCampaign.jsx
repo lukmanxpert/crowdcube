@@ -179,7 +179,7 @@ const AddCampaign = () => {
                         id="image"
                         required
                         name="username"
-                        value={user?.auth?.displayName || "anonymous"}
+                        value={user?.displayName || "anonymous"}
                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-indigo-300"
                     />
                 </div>

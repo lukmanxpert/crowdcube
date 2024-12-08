@@ -67,7 +67,7 @@ const Navbar = () => {
                                     className="w-10 h-10 rounded-full cursor-pointer"
                                 /> : <FaUserCircle className='h-8 w-8' />
                             }
-                            <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 hidden group-hover:block bg-gray-800 text-white text-sm py-1 px-3 rounded shadow-lg whitespace-nowrap z-10">
+                            <div className="absolute -left-20 transform -translate-x-1/2 top-8 hidden group-hover:block bg-gray-800 text-white text-sm py-1 px-3 rounded shadow-lg whitespace-nowrap z-10">
                                 {user.displayName}
                             </div>
                             <button

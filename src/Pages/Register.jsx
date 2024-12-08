@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
+import { FaGoogle } from 'react-icons/fa';
 
 const Register = () => {
-    const { setUser, signUpNewUser } = useContext(AuthContext);
+    const { setUser, signUpNewUser, signInWithGoogle } = useContext(AuthContext);
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -27,6 +28,16 @@ const Register = () => {
             })
             .catch(err => {
                 toast.error(err.message)
+            })
+    }
+    const handleGoogleRegister = () => {
+        signInWithGoogle()
+            .then(res => {
+                setUser(res.user);
+                navigate('/home')
+            })
+            .catch(err => {
+                console.log("ERROr", err);
             })
     }
     return (
@@ -61,6 +72,10 @@ const Register = () => {
                 </div>
                 <div className="form-control mt-6">
                     <button className="btn btn-primary">Register</button>
+                </div>
+                <div className='flex flex-col text-center justify-center items-center'>
+                    <p className='text-xs'>or</p>
+                    <button onClick={handleGoogleRegister} className='text-2xl font-bold flex items-center justify-center gap-2 shadow-md p-4 rounded-md'><FaGoogle></FaGoogle> Continue With Google</button>
                 </div>
             </form>
             <ToastContainer></ToastContainer>

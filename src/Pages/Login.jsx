@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
-    const { setUser, signInUser } = useContext(AuthContext)
+    const { setUser, signInUser, signInWithGoogle } = useContext(AuthContext)
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -35,6 +36,16 @@ const Login = () => {
                 });
             })
     }
+    const handleGoogleRegister = () => {
+        signInWithGoogle()
+            .then(res => {
+                setUser(res.user);
+                navigate('/home')
+            })
+            .catch(err => {
+                console.log("ERROr", err);
+            })
+    }
     return (
         <div className="card mx-auto mt-10 bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form onSubmit={handleSubmit} className="card-body">
@@ -56,6 +67,10 @@ const Login = () => {
                 </div>
                 <div className="form-control mt-6">
                     <button className="btn btn-primary">Login</button>
+                </div>
+                <div className='flex flex-col text-center justify-center items-center'>
+                    <p className='text-xs'>or</p>
+                    <button onClick={handleGoogleRegister} className='text-2xl font-bold flex items-center justify-center gap-2 shadow-md p-4 rounded-md'><FaGoogle></FaGoogle> Continue With Google</button>
                 </div>
             </form>
             <ToastContainer
