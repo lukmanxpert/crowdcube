@@ -7,7 +7,7 @@ const MyDonation = () => {
     const donations = myDonations.filter(items => items.email === user.email)
     console.log(donations);
     useEffect(() => {
-        fetch('http://localhost:5000/donateCollection', {
+        fetch('https://crowdcubee.vercel.app/donateCollection', {
             method: "GET"
         })
             .then(res => res.json())

@@ -18,7 +18,7 @@ const AddCampaign = () => {
         console.log("image", image);
         console.log(title, image, type, description, minimumDonation, deadline, username, creator);
         const campaign = { title, type, description, image, minimumDonation, deadline, creator }
-        fetch('http://localhost:5000/campaigns', {
+        fetch('https://crowdcubee.vercel.app/campaigns', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

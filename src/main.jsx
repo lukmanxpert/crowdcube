@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/all-campaign',
-        loader: () => fetch('http://localhost:5000/campaigns'),
+        loader: () => fetch('https://crowdcubee.vercel.app/campaigns'),
         element: <AllCampaign></AllCampaign>
       },
       {

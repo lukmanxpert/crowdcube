@@ -7,7 +7,7 @@ const MyCampaign = () => {
     const { email } = user
     const [myCampaigns, setMyCampaigns] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/myCampaigns/${email}`, {
+        fetch(`https://crowdcubee.vercel.app/myCampaigns/${email}`, {
             method: "GET"
         })
             .then(res => res.json())
@@ -25,7 +25,7 @@ const MyCampaign = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${id}`, {
+                fetch(`https://crowdcubee.vercel.app/delete/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => {

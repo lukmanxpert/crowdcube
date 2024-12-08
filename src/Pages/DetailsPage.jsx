@@ -9,7 +9,7 @@ const DetailsPage = () => {
     const params = useParams();
     const id = params.id;
     useEffect(() => {
-        fetch(`http://localhost:5000/campaigns/${id}`, {
+        fetch(`https://crowdcubee.vercel.app/campaigns/${id}`, {
             method: "GET"
         })
             .then(res => res.json())
@@ -22,7 +22,7 @@ const DetailsPage = () => {
         const campaignId = campaign._id
         const campaignTitle = campaign.title
         const donateData = { name, email, campaignId, campaignTitle }
-        fetch('http://localhost:5000/donatedCollection', {
+        fetch('https://crowdcubee.vercel.app/donatedCollection', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
