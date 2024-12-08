@@ -5,7 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import { FaGoogle } from 'react-icons/fa';
 
 const Register = () => {
-    const { setUser, signUpNewUser, signInWithGoogle } = useContext(AuthContext);
+    const { setUser, signUpNewUser, signInWithGoogle, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -23,6 +23,12 @@ const Register = () => {
         signUpNewUser(email, password)
             .then(res => {
                 setUser(res.user);
+                updateUserProfile(name, photo)
+                    .then(res => {
+                        console.log(res);
+                    }).catch(err => {
+                        console.log("ERROR", err);
+                    })
                 form.reset();
                 navigate('/home')
             })
