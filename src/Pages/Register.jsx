@@ -25,7 +25,6 @@ const Register = () => {
                 setUser(res.user);
                 updateUserProfile(name, photo)
                     .then(res => {
-                        console.log(res);
                     }).catch(err => {
                         console.log("ERROR", err);
                     })

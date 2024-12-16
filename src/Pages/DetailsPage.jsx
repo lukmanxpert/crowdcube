@@ -30,7 +30,6 @@ const DetailsPage = () => {
             body: JSON.stringify(donateData)
         })
             .then(res => {
-                console.log(res)
                 toast.success("Successfully Donated")
             })
             .catch(err => {

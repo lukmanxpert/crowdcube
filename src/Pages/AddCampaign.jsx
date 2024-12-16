@@ -15,8 +15,6 @@ const AddCampaign = () => {
         const deadline = form.deadline.value;
         const username = form.username.value;
         const creator = form.useremail.value;
-        console.log("image", image);
-        console.log(title, image, type, description, minimumDonation, deadline, username, creator);
         const campaign = { title, type, description, image, minimumDonation, deadline, creator }
         fetch('https://crowdcubee.vercel.app/campaigns', {
             method: "POST",
@@ -26,7 +24,6 @@ const AddCampaign = () => {
             body: JSON.stringify(campaign)
         })
             .then(res => {
-                console.log(res)
                 toast.success("Campaign Added")
                 form.reset()
             })

@@ -5,7 +5,6 @@ const MyDonation = () => {
     const { user } = useContext(AuthContext)
     const [myDonations, setMyDonations] = useState([])
     const donations = myDonations.filter(items => items.email === user.email)
-    console.log(donations);
     useEffect(() => {
         fetch('https://crowdcubee.vercel.app/donateCollection', {
             method: "GET"
